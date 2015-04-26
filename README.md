@@ -7,7 +7,7 @@ Ce code nécessite la librairie DS3231 disponible ici: [http://m5.img.dxcdn.com/
 
 L'IDE utilisé est **AtmelStudio + VisualMicro** mais le code est normalement compatible avec l'IDE Arduino.
 
-Les détails de la construction de l'horloge mère sont donnés ici: [http://breizhmakers.over-blog.com/2015/04/horloge-mere-pour-horloge-bodet.html](http://breizhmakers.over-blog.com/2015/04/horloge-mere-pour-horloge-bodet.html)
+Les détails de la construction de l'horloge mère sont donnés ici: [http://breizhmakers.over-blog.com/tag/horlogebodet/](http://breizhmakers.over-blog.com/tag/horlogebodet/)
 
 # Les objectifs fixés sont: #
 
