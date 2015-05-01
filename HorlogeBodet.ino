@@ -1,21 +1,31 @@
 #include <EEPROM.h>
 #include <Wire.h>
-#include <DS3231.h>
+#include "DS3231.h"
+#include "LowPower.h"
 
+//includes pour sleep mode
+#include <avr/interrupt.h>
+#include <avr/power.h>
+#include <avr/sleep.h>
+#include <avr/wdt.h>
 
-#ifdef ATTINY
-#define PIN_1 1
-#define PIN_2 2
+#define DEBUG_SERIAL
+
+#if defined(__AVR_ATmega32U4__)
+#define PIN_INTERRUPT 0
+#define ID_INTERRUPT 2
 #else
-#define PIN_1 12
-#define PIN_2 13
+#define ID_INTERRUPT 0
+#define PIN_INTERRUPT 2
 #endif
 
-#define PIN_FF 3
-#define PIN_INTERRUPT 0
+#define PIN_1 9
+#define PIN_2 10
+#define PIN_FF 4
 
 #define PULSE_WIDTH 400
-#define PERIOD 30000
+#define PERIOD 1000
+//#define PERIOD 30000
 #define OFFSET_WINTER 3600
 #define OFFSET_SUMMER 7200
 #define OFFSET_ADDRESS 0
@@ -23,14 +33,46 @@
 //positive if clock is disabled (for specified number of cycles)
 //used to disable clock for 1h during winter time change
 uint8_t disabled = 0;
+RTClib RTC;
+DS3231 clock;
+
+/************************************************************************/
+/* Wake-up interrupt routine                                            */
+/************************************************************************/
+void tick(){
+	
+}
 
 void setup() {
+    Wire.begin();
 	pinMode(PIN_1, OUTPUT);
 	pinMode(PIN_2, OUTPUT);
 	pinMode(PIN_FF,INPUT_PULLUP);
+	pinMode(PIN_INTERRUPT, INPUT);   
 	digitalWrite(PIN_1,LOW);
 	digitalWrite(PIN_2,LOW);
-	//Serial.begin(115200);
+#ifdef DEBUG_SERIAL	
+	Serial.begin(57600);
+#endif
+     //init RTC
+	 clock.enableOscillator(true,false,0); //enable 1Hz on SQW output
+	 
+	 DateTime now = RTC.now();
+        //TODO: remove true after tests
+	 if(true || now.year() == 2000){
+			//first run or dead battery, reinit to compile time & date
+			//DateTime newDT = DateTime(__DATE__, __TIME__);
+			DateTime newDT = DateTime(2015,5,1,15,20);
+			clock.setClockMode(false);	// set to 24h
+		 	clock.setYear(newDT.year()-2000);
+			clock.setMonth(newDT.month());
+			clock.setDate(newDT.day());
+			clock.setHour(newDT.hour());
+			clock.setMinute(newDT.minute());
+			clock.setSecond(newDT.second()); 
+	 }
+	 
+	 attachInterrupt(ID_INTERRUPT, tick, RISING);
 }
 
 void pulse(uint16_t pulseWidth)
@@ -133,7 +175,7 @@ uint16_t adjustDstEurope(DateTime t)
 
 uint32_t getCurrentTimeOffset()
 {
-	DateTime now = RTClib::now();
+	DateTime now = RTC.now();
 	uint32_t offset = adjustDstEurope(now);
 	return offset;
 }
@@ -142,11 +184,11 @@ uint32_t getCurrentTimeOffset()
 void loop() {
 	unsigned long t1,t2;
 	//fast-forward mode
-	if(digitalRead(PIN_FF)){
+	if(!digitalRead(PIN_FF)){
 		do{
 			pulse(PULSE_WIDTH);
 			delay(400);
-		}while(digitalRead(PIN_FF));
+		}while(!digitalRead(PIN_FF));
 	}
 	//check if DTS time change is required
 	//TODO implement
@@ -162,5 +204,26 @@ void loop() {
 		//updates are disabled
 		disabled--;
 	}
-	delay(PERIOD-((t2-t1)));     	        
+	
+#ifdef DEBUG_SERIAL
+	 DateTime now = RTC.now();
+	    Serial.print(now.year(), DEC);
+	    Serial.print('/');
+	    Serial.print(now.month(), DEC);
+	    Serial.print('/');
+	    Serial.print(now.day(), DEC);
+	    Serial.print(' ');
+	    Serial.print(now.hour(), DEC);
+	    Serial.print(':');
+	    Serial.print(now.minute(), DEC);
+	    Serial.print(':');
+	    Serial.print(now.second(), DEC);
+	    Serial.println();
+#endif	
+	//delay(PERIOD-((t2-t1)));     	 
+	// Enter power down state with ADC and BOD module disabled.
+	// Wake up when wake up pin is rising
+        //TODO set BOD_OFF after tests
+	LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_ON);  
+	
 }

@@ -1,0 +1,108 @@
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 30/04/2015 13:00:53
+
+BeginCmp
+TimeStamp = /553F277F;
+Reference = C1;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F29DF;
+Reference = C2;
+ValeurCmp = CP;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_20x10mm_RM2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F289E;
+Reference = C3;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F4D1D;
+Reference = CON1;
+ValeurCmp = BARREL_JACK;
+IdModule  = Connect:BARREL_JACK;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F2A3B;
+Reference = D1;
+ValeurCmp = LED;
+IdModule  = LEDs:LED-5MM;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F1F61;
+Reference = IC1;
+ValeurCmp = ATMEGA328-P;
+IdModule  = Housings_DIP:DIP-28__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F21D6;
+Reference = IC2;
+ValeurCmp = SN754410;
+IdModule  = Housings_DIP:DIP-16__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F76C9;
+Reference = P1;
+ValeurCmp = ISP10PIN;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F85BE;
+Reference = P2;
+ValeurCmp = DS3231_Breakout_Connector;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x05;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F2D4B;
+Reference = P3;
+ValeurCmp = Moteur Horloge;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x02;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F334F;
+Reference = R1;
+ValeurCmp = 22K;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F2C4A;
+Reference = R2;
+ValeurCmp = 47;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F26E8;
+Reference = R3;
+ValeurCmp = 470;
+IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F23F4;
+Reference = SW1;
+ValeurCmp = SWITCH_INV;
+IdModule  = Pin_Headers:Pin_Header_Straight_1x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /553F233A;
+Reference = SW2;
+ValeurCmp = Switch_DPST;
+IdModule  = Pin_Headers:Pin_Header_Straight_2x03;
+EndCmp
+
+EndListe

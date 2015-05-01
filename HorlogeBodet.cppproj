@@ -71,6 +71,8 @@
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>D:/arduino/arduino-1.0.5/hardware/arduino/libraries</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries</Value>
+      <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master/utility</Value>
+      <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master</Value>
       <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility</Value>
       <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/Wire/utility</Value>
@@ -109,6 +111,8 @@
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>D:/arduino/arduino-1.0.5/hardware/arduino/libraries</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries</Value>
+      <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master/utility</Value>
+      <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master</Value>
       <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility</Value>
       <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/Wire/utility</Value>
@@ -124,13 +128,18 @@
   <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
   <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
   <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>C:\Users\xnrq8224\Documents\Arduino\libraries\Low-Power-master</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.LibrarySearchPaths>
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino;D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo;D:/arduino/arduino-1.0.5/libraries;D:/arduino/arduino-1.0.5/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/xnrq8224/Documents/Arduino/libraries;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility;D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard;D:/arduino/arduino-1.0.5/libraries/Wire;D:/arduino/arduino-1.0.5/libraries/Wire/utility;D:/arduino/arduino-1.0.5/libraries/EEPROM;D:/arduino/arduino-1.0.5/libraries/EEPROM/utility;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino;D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo;D:/arduino/arduino-1.0.5/libraries;D:/arduino/arduino-1.0.5/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/xnrq8224/Documents/Arduino/libraries;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility;D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard;D:/arduino/arduino-1.0.5/libraries/Wire;D:/arduino/arduino-1.0.5/libraries/Wire/utility;D:/arduino/arduino-1.0.5/libraries/EEPROM;D:/arduino/arduino-1.0.5/libraries/EEPROM/utility;D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino/avr-libc;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.upload.port>COM5</arduino.upload.port>
+        <arduino.upload.port>COM6</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -165,6 +174,8 @@
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>D:/arduino/arduino-1.0.5/hardware/arduino/libraries</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries</Value>
+      <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master/utility</Value>
+      <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master</Value>
       <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility</Value>
       <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/Wire/utility</Value>
@@ -203,6 +214,8 @@
       <Value>C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers</Value>
       <Value>D:/arduino/arduino-1.0.5/hardware/arduino/libraries</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries</Value>
+      <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master/utility</Value>
+      <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master</Value>
       <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility</Value>
       <Value>C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/Wire/utility</Value>
@@ -218,13 +231,18 @@
   <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
   <avrgcccpp.compiler.optimization.DebugLevel>Default (-g2)</avrgcccpp.compiler.optimization.DebugLevel>
   <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
+  <avrgcccpp.linker.libraries.LibrarySearchPaths>
+    <ListValues>
+      <Value>C:\Users\xnrq8224\Documents\Arduino\libraries\Low-Power-master</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.LibrarySearchPaths>
   <avrgcccpp.assembler.debugging.DebugLevel>Default (-Wa,-g)</avrgcccpp.assembler.debugging.DebugLevel>
 </AvrGccCpp>
     </ToolchainSettings>
-    <VMSETTING_IncludePaths>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino;D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo;D:/arduino/arduino-1.0.5/libraries;D:/arduino/arduino-1.0.5/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/xnrq8224/Documents/Arduino/libraries;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility;D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard;D:/arduino/arduino-1.0.5/libraries/Wire;D:/arduino/arduino-1.0.5/libraries/Wire/utility;D:/arduino/arduino-1.0.5/libraries/EEPROM;D:/arduino/arduino-1.0.5/libraries/EEPROM/utility;</VMSETTING_IncludePaths>
+    <VMSETTING_IncludePaths>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino;D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo;D:/arduino/arduino-1.0.5/libraries;D:/arduino/arduino-1.0.5/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/xnrq8224/Documents/Arduino/libraries;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility;D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard;D:/arduino/arduino-1.0.5/libraries/Wire;D:/arduino/arduino-1.0.5/libraries/Wire/utility;D:/arduino/arduino-1.0.5/libraries/EEPROM;D:/arduino/arduino-1.0.5/libraries/EEPROM/utility;D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino/avr-libc;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.upload.port>COM5</arduino.upload.port>
+        <arduino.upload.port>COM6</arduino.upload.port>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -234,9 +252,218 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="src\" />
+    <Folder Include="src\sketch-api-readonly\" />
+    <Folder Include="src\sketch-api-readonly\core\" />
+    <Folder Include="src\sketch-api-readonly\core\avr-libc\" />
+    <Folder Include="src\sketch-api-readonly\libraries\" />
+    <Folder Include="src\sketch-api-readonly\libraries\DS3231\" />
+    <Folder Include="src\sketch-api-readonly\libraries\EEPROM\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Wire\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Wire\utility\" />
+    <Folder Include="src\sketch-api-readonly\variants\" />
+    <Folder Include="src\sketch-api-readonly\variants\leonardo\" />
     <Folder Include="Visual Micro\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\libraries\DS3231\DS3231.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\DS3231\DS3231.cpp</Link>
+    </Compile>
+    <Compile Include="..\libraries\DS3231\DS3231.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\DS3231\DS3231.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Arduino.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Arduino.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\avr-libc\malloc.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\avr-libc\malloc.c</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\avr-libc\realloc.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\avr-libc\realloc.c</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\avr-libc\sectionname.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\avr-libc\sectionname.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\avr-libc\stdlib_private.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\avr-libc\stdlib_private.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\binary.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\binary.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\CDC.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\CDC.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Client.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Client.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\HardwareSerial.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HardwareSerial.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\HardwareSerial.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HardwareSerial.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\HID.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\HID.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\IPAddress.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\IPAddress.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\IPAddress.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\IPAddress.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\main.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\main.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\new.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\new.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\new.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\new.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Platform.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Platform.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Print.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Print.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Print.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Print.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Printable.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Printable.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Server.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Server.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Stream.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Stream.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Stream.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Stream.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Tone.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Tone.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Udp.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\Udp.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\USBAPI.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\USBAPI.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\USBCore.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\USBCore.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\USBCore.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\USBCore.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\USBDesc.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\USBDesc.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\WCharacter.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\WCharacter.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\WInterrupts.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\WInterrupts.c</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\wiring.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring.c</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\wiring_analog.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring_analog.c</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\wiring_digital.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring_digital.c</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\wiring_private.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring_private.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\wiring_pulse.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring_pulse.c</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\wiring_shift.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\wiring_shift.c</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\WMath.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\WMath.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\WString.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\WString.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\WString.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\core\WString.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\variants\leonardo\pins_arduino.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\variants\leonardo\pins_arduino.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\libraries\EEPROM\EEPROM.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\EEPROM\EEPROM.cpp</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\libraries\EEPROM\EEPROM.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\EEPROM\EEPROM.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\libraries\Wire\utility\twi.c">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\utility\twi.c</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\libraries\Wire\utility\twi.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\utility\twi.h</Link>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\libraries\Wire\Wire.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\Wire.cpp</Link>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'Debug'"> -I"D:\arduino\arduino-1.0.5\libraries\Wire\utility"</CustomCompilationSetting>
+    </Compile>
+    <Compile Include="D:\arduino\arduino-1.0.5\libraries\Wire\Wire.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Wire\Wire.h</Link>
+      <CustomCompilationSetting Condition="'$(Configuration)' == 'Debug'"> -I"D:\arduino\arduino-1.0.5\libraries\Wire\utility"</CustomCompilationSetting>
+    </Compile>
     <Compile Include="Visual Micro\.ArduiBodet.vsarduino.h">
       <SubType>compile</SubType>
     </Compile>

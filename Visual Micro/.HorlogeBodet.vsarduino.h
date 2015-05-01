@@ -16,6 +16,7 @@
 #define __AVR__
 extern "C" void __cxa_pure_virtual() {;}
 
+void tick();
 //
 void pulse(uint16_t pulseWidth);
 void recordOffset(uint16_t offset);
