@@ -9,7 +9,7 @@
 #include <avr/sleep.h>
 #include <avr/wdt.h>
 
-#define DEBUG_SERIAL
+#define DEBUG_SERIAL 1
 
 #if defined(__AVR_ATmega32U4__)
 #define PIN_INTERRUPT 0
@@ -29,18 +29,49 @@
 #define OFFSET_WINTER 3600
 #define OFFSET_SUMMER 7200
 #define OFFSET_ADDRESS 0
+#define FAST_FORWARD_DELAY 400
 
 //positive if clock is disabled (for specified number of cycles)
 //used to disable clock for 1h during winter time change
 uint8_t disabled = 0;
 RTClib RTC;
 DS3231 clock;
+volatile uint8_t tickCounter=0;
+//true if a tick interrupt has been received
+volatile uint8_t tickReceived=0;
 
+#ifdef DEBUG_SERIAL
+void dumpTimestamp(char* msg){
+	DateTime now = RTC.now();
+	  Serial.print(now.year(), DEC);
+	  Serial.print('/');
+	  Serial.print(now.month(), DEC);
+	  Serial.print('/');
+	  Serial.print(now.day(), DEC);
+	  Serial.print(' ');
+	  Serial.print(now.hour(), DEC);
+	  Serial.print(':');
+	  Serial.print(now.minute(), DEC);
+	  Serial.print(':');
+	  Serial.print(now.second(), DEC);
+	  Serial.print(' ');
+	  Serial.println(msg);
+}
+#endif
 /************************************************************************/
 /* Wake-up interrupt routine                                            */
 /************************************************************************/
 void tick(){
+	if(tickCounter == 0){
+		tickReceived = true;
+	}else{
+		tickReceived = false;
+	}
 	
+	tickCounter++;
+	if(tickCounter == 30){
+		tickCounter = 0;
+	}
 }
 
 void setup() {
@@ -52,7 +83,7 @@ void setup() {
 	digitalWrite(PIN_1,LOW);
 	digitalWrite(PIN_2,LOW);
 #ifdef DEBUG_SERIAL	
-	Serial.begin(57600);
+	Serial.begin(9600);
 #endif
      //init RTC
 	 clock.enableOscillator(true,false,0); //enable 1Hz on SQW output
@@ -73,8 +104,20 @@ void setup() {
 	 }
 	 
 	 attachInterrupt(ID_INTERRUPT, tick, RISING);
+	 
+	 //TODO supprimer après tests
+	 pinMode(13,OUTPUT);
+	 digitalWrite(13,HIGH);
+	 delay(5000);
+	 digitalWrite(13,LOW);
+	 #ifdef DEBUG_SERIAL
+	 dumpTimestamp("starting loop");
+	 #endif
 }
 
+/************************************************************************/
+/* Send pulse to clock motor - pulse polarity is automatically inverted on each call  */
+/************************************************************************/
 void pulse(uint16_t pulseWidth)
 {
 	static uint8_t step = 0;
@@ -106,6 +149,7 @@ void recordOffset(uint16_t offset)
 uint16_t readOffset()
 {
 	uint16_t offset = EEPROM.read(OFFSET_ADDRESS) | (EEPROM.read(OFFSET_ADDRESS+1) << 8);
+	return offset;
 }
 
 /************************************************************************/
@@ -180,50 +224,84 @@ uint32_t getCurrentTimeOffset()
 	return offset;
 }
 
+/*********************************************************************************************/
+/*  add 1h to the displayed time, and compensates for the time taken to move the clock hands */
+/*********************************************************************************************/
+void fastForwardToSummerTime(){
+	for(int p=0;p<121;p++){
+		pulse(PULSE_WIDTH);
+		delay(FAST_FORWARD_DELAY);
+	}
+}
 
 void loop() {
-	unsigned long t1,t2;
-	//fast-forward mode
-	if(!digitalRead(PIN_FF)){
-		do{
+		unsigned long t1,t2;
+		//fast-forward mode
+		if(!digitalRead(PIN_FF)){
+			do{
+				pulse(PULSE_WIDTH);
+				delay(FAST_FORWARD_DELAY);
+			}while(!digitalRead(PIN_FF));
+		}
+	if(tickReceived){
+		#ifdef DEBUG_SERIAL
+		dumpTimestamp("tickReceived");
+		#endif
+		uint8_t changeRequired = calcDSTChange();
+		#ifdef DEBUG_SERIAL
+		Serial.print("changeRequired: ");
+		Serial.println(changeRequired);
+		#endif
+		if(changeRequired == -1){
+			disabled = 3600;
+		}else{
+			if(changeRequired == 1){
+				fastForwardToSummerTime();
+			}
+		}
+		
+		//check if DTS time change is required
+		//TODO implement
+		//if -1 -> disabled = 3600
+		//if 1 -> fast-forward for 1h + delta secs (to be measured)
+	
+		//main loop
+		if(disabled == 0){
+			t1 = millis();
 			pulse(PULSE_WIDTH);
-			delay(400);
-		}while(!digitalRead(PIN_FF));
-	}
-	//check if DTS time change is required
-	//TODO implement
-	//if -1 -> disabled = 3600
-	//if 1 -> fast-forward for 1h + delta secs (to be measured)
+			t2 = millis();
+		}else{
+			//updates are disabled
+			disabled--;
+		}
 	
-	//main loop
-	if(disabled == 0){
-		t1 = millis();
-		pulse(PULSE_WIDTH);
-		t2 = millis();
-	}else{
-		//updates are disabled
-		disabled--;
-	}
-	
-#ifdef DEBUG_SERIAL
-	 DateTime now = RTC.now();
-	    Serial.print(now.year(), DEC);
-	    Serial.print('/');
-	    Serial.print(now.month(), DEC);
-	    Serial.print('/');
-	    Serial.print(now.day(), DEC);
-	    Serial.print(' ');
-	    Serial.print(now.hour(), DEC);
-	    Serial.print(':');
-	    Serial.print(now.minute(), DEC);
-	    Serial.print(':');
-	    Serial.print(now.second(), DEC);
-	    Serial.println();
-#endif	
+	#ifdef DEBUG_SERIAL
+		 DateTime now = RTC.now();
+			Serial.print(now.year(), DEC);
+			Serial.print('/');
+			Serial.print(now.month(), DEC);
+			Serial.print('/');
+			Serial.print(now.day(), DEC);
+			Serial.print(' ');
+			Serial.print(now.hour(), DEC);
+			Serial.print(':');
+			Serial.print(now.minute(), DEC);
+			Serial.print(':');
+			Serial.print(now.second(), DEC);
+			Serial.println();
+	#endif	
+  }
 	//delay(PERIOD-((t2-t1)));     	 
 	// Enter power down state with ADC and BOD module disabled.
 	// Wake up when wake up pin is rising
         //TODO set BOD_OFF after tests
 	LowPower.powerDown(SLEEP_FOREVER, ADC_OFF, BOD_ON);  
 	
+	//LowPower.powerSave(SLEEP_FOREVER, ADC_OFF, BOD_ON,TIMER2_ON);  
+	//LowPower.idle(SLEEP_FOREVER, ADC_OFF,TIMER4_ON,TIMER3_ON,	TIMER1_ON, TIMER0_ON,SPI_ON,USART1_ON,TWI_ON,USB_ON);  
+	//TODO supprimer après tests
+	pinMode(13,OUTPUT);
+	digitalWrite(13,HIGH);
+	delay(25);
+	digitalWrite(13,LOW);
 }

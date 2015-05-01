@@ -5,7 +5,7 @@
     <ProjectVersion>6.2</ProjectVersion>
     <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
     <ProjectGuid>{07b459b4-8d76-4638-bc6d-a459ba2d616b}</ProjectGuid>
-    <avrdevice>atmega32u4</avrdevice>
+    <avrdevice>atmega328p</avrdevice>
     <avrdeviceseries>none</avrdeviceseries>
     <OutputType>Executable</OutputType>
     <Language>CPP</Language>
@@ -52,8 +52,8 @@
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega32u4__</Value>
-      <Value>__AVR_ATmega32U4__</Value>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
       <Value>ARDUINO=105</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
@@ -79,7 +79,7 @@
       <Value>D:/arduino/arduino-1.0.5/libraries/Wire</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/EEPROM/utility</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/EEPROM</Value>
-      <Value>D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo</Value>
+      <Value>D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard</Value>
       <Value>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
@@ -92,8 +92,8 @@
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega32u4__</Value>
-      <Value>__AVR_ATmega32U4__</Value>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
       <Value>ARDUINO=105</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
@@ -119,7 +119,7 @@
       <Value>D:/arduino/arduino-1.0.5/libraries/Wire</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/EEPROM/utility</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/EEPROM</Value>
-      <Value>D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo</Value>
+      <Value>D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard</Value>
       <Value>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
@@ -139,7 +139,68 @@
     <VMSETTING_IncludePaths>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino;D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo;D:/arduino/arduino-1.0.5/libraries;D:/arduino/arduino-1.0.5/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/xnrq8224/Documents/Arduino/libraries;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility;D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard;D:/arduino/arduino-1.0.5/libraries/Wire;D:/arduino/arduino-1.0.5/libraries/Wire/utility;D:/arduino/arduino-1.0.5/libraries/EEPROM;D:/arduino/arduino-1.0.5/libraries/EEPROM/utility;D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino/avr-libc;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.upload.port>COM6</arduino.upload.port>
+        <arduino.upload.port>COM5</arduino.upload.port>
+        <arduino.board.name>uno</arduino.board.name>
+        <arduino.board.desc>Arduino Uno</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Uno
+upload.protocol=arduino
+upload.maximum_size=32256
+upload.speed=115200
+bootloader.low_fuses=0xff
+bootloader.high_fuses=0xde
+bootloader.extended_fuses=0x05
+bootloader.path=optiboot
+bootloader.file=optiboot_atmega328.hex
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x0F
+build.mcu=atmega328p
+build.f_cpu=16000000L
+build.core=arduino
+build.variant=standard
+runtime.ide.path=D:\arduino\arduino-1.0.5
+build.system.path=D:\arduino\arduino-1.0.5\hardware\arduino\system
+runtime.ide.version=105
+originalid=uno
+vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino10x
+ide.hint=Arduino 0023 and 1.0.x Ide
+ide.location.key=Arduino
+ide.location.ide.winreg=Arduino 1.0.x Application
+ide.location.sketchbook.winreg=Arduino 1.0.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.sketchbook.default=%MYDOCUMENTS%\arduino
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=true
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionLTEQ=149
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ide.appid=arduino10x
+location.sketchbook=C:\Users\xnrq8224\Documents\Arduino\
+vm.core.include=arduino.h
+build.board=AVR_UNO
+vm.boardsource.path=D:\arduino\arduino-1.0.5\hardware\arduino
+runtime.platform.path=D:\arduino\arduino-1.0.5\hardware\arduino
+vm.platformname.name=avr
+build.arch=AVR
+</arduino.board.property_bag>
+        <arduino.build.mcu>atmega328p</arduino.build.mcu>
+        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>arduino</arduino.upload.protocol>
+        <arduino.upload.speed>115200</arduino.upload.speed>
+        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino10x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -155,8 +216,8 @@
   <avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcc.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega32u4__</Value>
-      <Value>__AVR_ATmega32U4__</Value>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
       <Value>ARDUINO=105</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
@@ -182,7 +243,7 @@
       <Value>D:/arduino/arduino-1.0.5/libraries/Wire</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/EEPROM/utility</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/EEPROM</Value>
-      <Value>D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo</Value>
+      <Value>D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard</Value>
       <Value>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
@@ -195,8 +256,8 @@
   <avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>True</avrgcccpp.compiler.general.ChangeDefaultBitFieldUnsigned>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
-      <Value>__AVR_ATmega32u4__</Value>
-      <Value>__AVR_ATmega32U4__</Value>
+      <Value>__AVR_ATmega328p__</Value>
+      <Value>__AVR_ATmega328P__</Value>
       <Value>ARDUINO=105</Value>
       <Value>ARDUINO_MAIN</Value>
       <Value>F_CPU=16000000L</Value>
@@ -222,7 +283,7 @@
       <Value>D:/arduino/arduino-1.0.5/libraries/Wire</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/EEPROM/utility</Value>
       <Value>D:/arduino/arduino-1.0.5/libraries/EEPROM</Value>
-      <Value>D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo</Value>
+      <Value>D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard</Value>
       <Value>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
@@ -242,7 +303,68 @@
     <VMSETTING_IncludePaths>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino;D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo;D:/arduino/arduino-1.0.5/libraries;D:/arduino/arduino-1.0.5/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/xnrq8224/Documents/Arduino/libraries;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility;D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard;D:/arduino/arduino-1.0.5/libraries/Wire;D:/arduino/arduino-1.0.5/libraries/Wire/utility;D:/arduino/arduino-1.0.5/libraries/EEPROM;D:/arduino/arduino-1.0.5/libraries/EEPROM/utility;D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino/avr-libc;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.upload.port>COM6</arduino.upload.port>
+        <arduino.upload.port>COM5</arduino.upload.port>
+        <arduino.board.name>uno</arduino.board.name>
+        <arduino.board.desc>Arduino Uno</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Uno
+upload.protocol=arduino
+upload.maximum_size=32256
+upload.speed=115200
+bootloader.low_fuses=0xff
+bootloader.high_fuses=0xde
+bootloader.extended_fuses=0x05
+bootloader.path=optiboot
+bootloader.file=optiboot_atmega328.hex
+bootloader.unlock_bits=0x3F
+bootloader.lock_bits=0x0F
+build.mcu=atmega328p
+build.f_cpu=16000000L
+build.core=arduino
+build.variant=standard
+runtime.ide.path=D:\arduino\arduino-1.0.5
+build.system.path=D:\arduino\arduino-1.0.5\hardware\arduino\system
+runtime.ide.version=105
+originalid=uno
+vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino10x
+ide.hint=Arduino 0023 and 1.0.x Ide
+ide.location.key=Arduino
+ide.location.ide.winreg=Arduino 1.0.x Application
+ide.location.sketchbook.winreg=Arduino 1.0.x Sketchbook
+ide.location.sketchbook.preferences=sketchbook.path
+ide.location.sketchbook.default=%MYDOCUMENTS%\arduino
+ide.location.preferences=%VM_APPDATA_ROAMING%\arduino\preferences.txt
+ide.default.package=arduino
+ide.default.platform=avr
+ide.multiplatform=true
+ide.includes=arduino.h
+ide.platformswithoutpackage=true
+ide.includes.fallback=wprogram.h
+ide.extension=ino
+ide.extension.fallback=pde
+ide.versionLTEQ=149
+ide.exe=arduino.exe
+ide.hosts=atmel
+ide.url=http://arduino.cc/en/Main/Software
+vm.debug=true
+software=ARDUINO
+ide.appid=arduino10x
+location.sketchbook=C:\Users\xnrq8224\Documents\Arduino\
+vm.core.include=arduino.h
+build.board=AVR_UNO
+vm.boardsource.path=D:\arduino\arduino-1.0.5\hardware\arduino
+runtime.platform.path=D:\arduino\arduino-1.0.5\hardware\arduino
+vm.platformname.name=avr
+build.arch=AVR
+</arduino.board.property_bag>
+        <arduino.build.mcu>atmega328p</arduino.build.mcu>
+        <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
+        <arduino.build.core>arduino</arduino.build.core>
+        <arduino.upload.protocol>arduino</arduino.upload.protocol>
+        <arduino.upload.speed>115200</arduino.upload.speed>
+        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
+        <visualmicro.application.name>arduino10x</visualmicro.application.name>
+        <visualmicro.package.name>arduino</visualmicro.package.name>
+        <visualmicro.platform.name>avr</visualmicro.platform.name>
       </VisualMicroSettings>
     </VisualMicroSettings>
   </PropertyGroup>
@@ -259,10 +381,11 @@
     <Folder Include="src\sketch-api-readonly\libraries\" />
     <Folder Include="src\sketch-api-readonly\libraries\DS3231\" />
     <Folder Include="src\sketch-api-readonly\libraries\EEPROM\" />
+    <Folder Include="src\sketch-api-readonly\libraries\Low-Power-master\" />
     <Folder Include="src\sketch-api-readonly\libraries\Wire\" />
     <Folder Include="src\sketch-api-readonly\libraries\Wire\utility\" />
     <Folder Include="src\sketch-api-readonly\variants\" />
-    <Folder Include="src\sketch-api-readonly\variants\leonardo\" />
+    <Folder Include="src\sketch-api-readonly\variants\standard\" />
     <Folder Include="Visual Micro\" />
   </ItemGroup>
   <ItemGroup>
@@ -273,6 +396,14 @@
     <Compile Include="..\libraries\DS3231\DS3231.h">
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\libraries\DS3231\DS3231.h</Link>
+    </Compile>
+    <Compile Include="..\libraries\Low-Power-master\LowPower.cpp">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Low-Power-master\LowPower.cpp</Link>
+    </Compile>
+    <Compile Include="..\libraries\Low-Power-master\LowPower.h">
+      <SubType>compile</SubType>
+      <Link>src\sketch-api-readonly\libraries\Low-Power-master\LowPower.h</Link>
     </Compile>
     <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\cores\arduino\Arduino.h">
       <SubType>compile</SubType>
@@ -434,9 +565,9 @@
       <SubType>compile</SubType>
       <Link>src\sketch-api-readonly\core\WString.h</Link>
     </Compile>
-    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\variants\leonardo\pins_arduino.h">
+    <Compile Include="D:\arduino\arduino-1.0.5\hardware\arduino\variants\standard\pins_arduino.h">
       <SubType>compile</SubType>
-      <Link>src\sketch-api-readonly\variants\leonardo\pins_arduino.h</Link>
+      <Link>src\sketch-api-readonly\variants\standard\pins_arduino.h</Link>
     </Compile>
     <Compile Include="D:\arduino\arduino-1.0.5\libraries\EEPROM\EEPROM.cpp">
       <SubType>compile</SubType>
