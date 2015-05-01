@@ -93,7 +93,7 @@ void setup() {
 	 if(true || now.year() == 2000){
 			//first run or dead battery, reinit to compile time & date
 			//DateTime newDT = DateTime(__DATE__, __TIME__);
-			DateTime newDT = DateTime(2015,5,1,15,20);
+			DateTime newDT = DateTime(2015,6,1,15,20);
 			clock.setClockMode(false);	// set to 24h
 		 	clock.setYear(newDT.year()-2000);
 			clock.setMonth(newDT.month());
@@ -105,11 +105,7 @@ void setup() {
 	 
 	 attachInterrupt(ID_INTERRUPT, tick, RISING);
 	 
-	 //TODO supprimer après tests
-	 pinMode(13,OUTPUT);
-	 digitalWrite(13,HIGH);
-	 delay(5000);
-	 digitalWrite(13,LOW);
+
 	 #ifdef DEBUG_SERIAL
 	 dumpTimestamp("starting loop");
 	 #endif
@@ -247,13 +243,17 @@ void loop() {
 		#ifdef DEBUG_SERIAL
 		dumpTimestamp("tickReceived");
 		#endif
-		uint8_t changeRequired = calcDSTChange();
+		#ifdef DEBUG_SERIAL
+		Serial.print("disabled: ");
+		Serial.println(disabled);
+		#endif
+		int8_t changeRequired = calcDSTChange();
 		#ifdef DEBUG_SERIAL
 		Serial.print("changeRequired: ");
-		Serial.println(changeRequired);
+		Serial.println(changeRequired,DEC);
 		#endif
 		if(changeRequired == -1){
-			disabled = 3600;
+			disabled = 120; //2 cycles per min
 		}else{
 			if(changeRequired == 1){
 				fastForwardToSummerTime();
@@ -274,22 +274,6 @@ void loop() {
 			//updates are disabled
 			disabled--;
 		}
-	
-	#ifdef DEBUG_SERIAL
-		 DateTime now = RTC.now();
-			Serial.print(now.year(), DEC);
-			Serial.print('/');
-			Serial.print(now.month(), DEC);
-			Serial.print('/');
-			Serial.print(now.day(), DEC);
-			Serial.print(' ');
-			Serial.print(now.hour(), DEC);
-			Serial.print(':');
-			Serial.print(now.minute(), DEC);
-			Serial.print(':');
-			Serial.print(now.second(), DEC);
-			Serial.println();
-	#endif	
   }
 	//delay(PERIOD-((t2-t1)));     	 
 	// Enter power down state with ADC and BOD module disabled.
