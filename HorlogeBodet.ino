@@ -93,7 +93,7 @@ void setup() {
 	 if(true || now.year() == 2000){
 			//first run or dead battery, reinit to compile time & date
 			//DateTime newDT = DateTime(__DATE__, __TIME__);
-			DateTime newDT = DateTime(2015,6,1,15,20);
+			DateTime newDT = DateTime(2015,5,1,15,20);
 			clock.setClockMode(false);	// set to 24h
 		 	clock.setYear(newDT.year()-2000);
 			clock.setMonth(newDT.month());
@@ -157,6 +157,12 @@ int8_t calcDSTChange()
 	int8_t change = 0;
 	uint16_t currentOffset =  getCurrentTimeOffset();
 	uint16_t previousOffset = readOffset();
+	#ifdef DEBUG_SERIAL	
+	Serial.print("currentOffset: ");
+	Serial.println(currentOffset);
+	Serial.print("previousOffset: ");
+	Serial.println(previousOffset);
+	#endif
 	if(previousOffset != 0 && (previousOffset != currentOffset)){
 		//change required
 		recordOffset(currentOffset);
@@ -224,20 +230,25 @@ uint32_t getCurrentTimeOffset()
 /*  add 1h to the displayed time, and compensates for the time taken to move the clock hands */
 /*********************************************************************************************/
 void fastForwardToSummerTime(){
+	detachInterrupt(PIN_INTERRUPT);
 	for(int p=0;p<121;p++){
 		pulse(PULSE_WIDTH);
 		delay(FAST_FORWARD_DELAY);
 	}
+	attachInterrupt(ID_INTERRUPT, tick, RISING);
 }
 
 void loop() {
 		unsigned long t1,t2;
 		//fast-forward mode
 		if(!digitalRead(PIN_FF)){
+			detachInterrupt(PIN_INTERRUPT);
 			do{
 				pulse(PULSE_WIDTH);
 				delay(FAST_FORWARD_DELAY);
 			}while(!digitalRead(PIN_FF));
+			tickCounter=1;
+			attachInterrupt(ID_INTERRUPT, tick, RISING);
 		}
 	if(tickReceived){
 		#ifdef DEBUG_SERIAL

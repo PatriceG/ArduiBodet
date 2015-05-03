@@ -139,18 +139,18 @@
     <VMSETTING_IncludePaths>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino;D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo;D:/arduino/arduino-1.0.5/libraries;D:/arduino/arduino-1.0.5/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/xnrq8224/Documents/Arduino/libraries;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility;D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard;D:/arduino/arduino-1.0.5/libraries/Wire;D:/arduino/arduino-1.0.5/libraries/Wire/utility;D:/arduino/arduino-1.0.5/libraries/EEPROM;D:/arduino/arduino-1.0.5/libraries/EEPROM/utility;D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino/avr-libc;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.upload.port>COM5</arduino.upload.port>
-        <arduino.board.name>uno</arduino.board.name>
-        <arduino.board.desc>Arduino Uno</arduino.board.desc>
-        <arduino.board.property_bag>name=Arduino Uno
+        <arduino.upload.port>COM8</arduino.upload.port>
+        <arduino.board.name>atmega328</arduino.board.name>
+        <arduino.board.desc>Arduino Duemilanove w/ ATmega328</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Duemilanove w/ ATmega328
 upload.protocol=arduino
-upload.maximum_size=32256
-upload.speed=115200
-bootloader.low_fuses=0xff
-bootloader.high_fuses=0xde
+upload.maximum_size=30720
+upload.speed=57600
+bootloader.low_fuses=0xFF
+bootloader.high_fuses=0xDA
 bootloader.extended_fuses=0x05
-bootloader.path=optiboot
-bootloader.file=optiboot_atmega328.hex
+bootloader.path=atmega
+bootloader.file=ATmegaBOOT_168_atmega328.hex
 bootloader.unlock_bits=0x3F
 bootloader.lock_bits=0x0F
 build.mcu=atmega328p
@@ -160,7 +160,7 @@ build.variant=standard
 runtime.ide.path=D:\arduino\arduino-1.0.5
 build.system.path=D:\arduino\arduino-1.0.5\hardware\arduino\system
 runtime.ide.version=105
-originalid=uno
+originalid=atmega328
 vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino10x
 ide.hint=Arduino 0023 and 1.0.x Ide
 ide.location.key=Arduino
@@ -186,7 +186,7 @@ software=ARDUINO
 ide.appid=arduino10x
 location.sketchbook=C:\Users\xnrq8224\Documents\Arduino\
 vm.core.include=arduino.h
-build.board=AVR_UNO
+build.board=AVR_ATMEGA328
 vm.boardsource.path=D:\arduino\arduino-1.0.5\hardware\arduino
 runtime.platform.path=D:\arduino\arduino-1.0.5\hardware\arduino
 vm.platformname.name=avr
@@ -196,8 +196,8 @@ build.arch=AVR
         <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
         <arduino.build.core>arduino</arduino.build.core>
         <arduino.upload.protocol>arduino</arduino.upload.protocol>
-        <arduino.upload.speed>115200</arduino.upload.speed>
-        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
+        <arduino.upload.speed>57600</arduino.upload.speed>
+        <arduino.upload.maximum_size>30720</arduino.upload.maximum_size>
         <visualmicro.application.name>arduino10x</visualmicro.application.name>
         <visualmicro.package.name>arduino</visualmicro.package.name>
         <visualmicro.platform.name>avr</visualmicro.platform.name>
@@ -303,18 +303,18 @@ build.arch=AVR
     <VMSETTING_IncludePaths>D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino;D:/arduino/arduino-1.0.5/hardware/arduino/variants/leonardo;D:/arduino/arduino-1.0.5/libraries;D:/arduino/arduino-1.0.5/hardware/arduino/libraries;C:/Program Files (x86)/Visual Micro/Visual Micro for Arduino/Micro Platforms/default/debuggers;C:/Users/xnrq8224/Documents/Arduino/libraries;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/include/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/avr/;d:/arduino/arduino-1.0.5/hardware/tools/avr/lib/gcc/avr/4.3.2/include/;;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231;C:/Users/xnrq8224/Documents/Arduino/libraries/DS3231/utility;D:/arduino/arduino-1.0.5/hardware/arduino/variants/standard;D:/arduino/arduino-1.0.5/libraries/Wire;D:/arduino/arduino-1.0.5/libraries/Wire/utility;D:/arduino/arduino-1.0.5/libraries/EEPROM;D:/arduino/arduino-1.0.5/libraries/EEPROM/utility;D:/arduino/arduino-1.0.5/hardware/arduino/cores/arduino/avr-libc;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master;C:/Users/xnrq8224/Documents/Arduino/libraries/Low-Power-master/utility;</VMSETTING_IncludePaths>
     <VisualMicroSettings>
       <VisualMicroSettings>
-        <arduino.upload.port>COM5</arduino.upload.port>
-        <arduino.board.name>uno</arduino.board.name>
-        <arduino.board.desc>Arduino Uno</arduino.board.desc>
-        <arduino.board.property_bag>name=Arduino Uno
+        <arduino.upload.port>COM8</arduino.upload.port>
+        <arduino.board.name>atmega328</arduino.board.name>
+        <arduino.board.desc>Arduino Duemilanove w/ ATmega328</arduino.board.desc>
+        <arduino.board.property_bag>name=Arduino Duemilanove w/ ATmega328
 upload.protocol=arduino
-upload.maximum_size=32256
-upload.speed=115200
-bootloader.low_fuses=0xff
-bootloader.high_fuses=0xde
+upload.maximum_size=30720
+upload.speed=57600
+bootloader.low_fuses=0xFF
+bootloader.high_fuses=0xDA
 bootloader.extended_fuses=0x05
-bootloader.path=optiboot
-bootloader.file=optiboot_atmega328.hex
+bootloader.path=atmega
+bootloader.file=ATmegaBOOT_168_atmega328.hex
 bootloader.unlock_bits=0x3F
 bootloader.lock_bits=0x0F
 build.mcu=atmega328p
@@ -324,7 +324,7 @@ build.variant=standard
 runtime.ide.path=D:\arduino\arduino-1.0.5
 build.system.path=D:\arduino\arduino-1.0.5\hardware\arduino\system
 runtime.ide.version=105
-originalid=uno
+originalid=atmega328
 vm.platform.root.path=C:\Program Files (x86)\Visual Micro\Visual Micro for Arduino\Micro Platforms\arduino10x
 ide.hint=Arduino 0023 and 1.0.x Ide
 ide.location.key=Arduino
@@ -350,7 +350,7 @@ software=ARDUINO
 ide.appid=arduino10x
 location.sketchbook=C:\Users\xnrq8224\Documents\Arduino\
 vm.core.include=arduino.h
-build.board=AVR_UNO
+build.board=AVR_ATMEGA328
 vm.boardsource.path=D:\arduino\arduino-1.0.5\hardware\arduino
 runtime.platform.path=D:\arduino\arduino-1.0.5\hardware\arduino
 vm.platformname.name=avr
@@ -360,8 +360,8 @@ build.arch=AVR
         <arduino.build.f_cpu>16000000L</arduino.build.f_cpu>
         <arduino.build.core>arduino</arduino.build.core>
         <arduino.upload.protocol>arduino</arduino.upload.protocol>
-        <arduino.upload.speed>115200</arduino.upload.speed>
-        <arduino.upload.maximum_size>32256</arduino.upload.maximum_size>
+        <arduino.upload.speed>57600</arduino.upload.speed>
+        <arduino.upload.maximum_size>30720</arduino.upload.maximum_size>
         <visualmicro.application.name>arduino10x</visualmicro.application.name>
         <visualmicro.package.name>arduino</visualmicro.package.name>
         <visualmicro.platform.name>avr</visualmicro.platform.name>
