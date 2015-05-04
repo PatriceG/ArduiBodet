@@ -1,4 +1,4 @@
-(pcb C:\Users\xnrq8224\Documents\Arduino\ArduiBodet\doc\Kicad\ArduiBodet.dsn
+(pcb C:\Users\xnrq8224\Documents\Arduino\HorlogeBodet\doc\Kicad\ArduiBodet.dsn
   (parser
     (string_quote ")
     (space_in_quoted_tokens on)
@@ -21,55 +21,61 @@
       )
     )
     (boundary
-      (rect pcb 114765 -86855.5 202657 -155915)
+      (path pcb 0  118110 -87630  118110 -148590  198120 -148590  198120 -87630
+            118110 -87630)
     )
-    (via "Via[0-1]_600:400_um")
+    (via "Via[0-1]_500:300_um")
     (rule
-      (width 250)
-      (clearance 200.1)
-      (clearance 200.1 (type default_smd))
-      (clearance 50 (type smd_smd))
+      (width 300)
+      (clearance 300.1)
+      (clearance 300.1 (type default_smd))
+      (clearance 75 (type smd_smd))
     )
   )
   (placement
     (component Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5
-      (place C1 182880 -113030 front 0 (PN 100nF))
-      (place C3 149860 -134620 front 0 (PN 100nF))
-    )
-    (component Capacitors_Elko_ThroughHole:Elko_vert_20x10mm_RM2.5
-      (place C2 195580 -107950 front 180 (PN CP))
-    )
-    (component Connect:BARREL_JACK
-      (place CON1 182880 -93980 front 0 (PN BARREL_JACK))
+      (place C1 186690 -113030 front 0 (PN 100nF))
+      (place C3 158750 -129540 front 0 (PN 100nF))
+      (place C5 167640 -95250 front 90 (PN 330nF))
+      (place C2 143510 -95250 front 0 (PN "100 nF"))
     )
     (component "LEDs:LED-5MM"
-      (place D1 125730 -138430 front 0 (PN LED))
+      (place D1 161290 -139700 front 90 (PN LED))
     )
     (component "Housings_DIP:DIP-28__300"
-      (place IC1 151130 -125730 front 0 (PN "ATMEGA328-P"))
+      (place IC1 160020 -120650 front 0 (PN "ATMEGA328-P"))
     )
     (component "Housings_DIP:DIP-16__300"
-      (place IC2 184150 -128270 front 270 (PN SN754410))
+      (place IC2 187960 -128270 front 270 (PN SN754410))
     )
     (component Pin_Headers:Pin_Header_Straight_2x05
-      (place P1 158750 -110490 front 90 (PN ISP10PIN))
+      (place P1 158750 -105410 front 90 (PN ISP10PIN))
     )
     (component Pin_Headers:Pin_Header_Straight_1x05
-      (place P2 125730 -114300 front 0 (PN DS3231_Breakout_Connector))
+      (place P2 129540 -115570 front 0 (PN DS3231_Breakout_Connector))
     )
     (component Pin_Headers:Pin_Header_Straight_1x02
-      (place P3 170180 -144780 front 90 (PN "Moteur Horloge"))
+      (place P3 171450 -138430 front 90 (PN "Moteur Horloge"))
     )
     (component Resistors_ThroughHole:Resistor_Horizontal_RM10mm
-      (place R1 152400 -116840 front 0 (PN 22K))
-      (place R2 167640 -138430 front 0 (PN 47))
-      (place R3 130810 -151130 front 0 (PN 470))
+      (place R1 137160 -120650 front 270 (PN 22K))
+      (place R2 176530 -132080 front 0 (PN 47))
+      (place R3 156210 -144780 front 180 (PN 470))
     )
     (component Pin_Headers:Pin_Header_Straight_1x03
-      (place SW1 198120 -96520 front 180 (PN SWITCH_INV))
+      (place SW1 177800 -105410 front 180 (PN SWITCH_INV))
     )
     (component Pin_Headers:Pin_Header_Straight_2x03
-      (place SW2 139700 -143510 front 270 (PN Switch_DPST))
+      (place SW2 153670 -134620 front 270 (PN Switch_DPST))
+    )
+    (component Capacitors_Elko_ThroughHole:Elko_vert_20x10mm_RM2.5
+      (place C4 157480 -95250 front 90 (PN "1000 uF"))
+    )
+    (component "Power_Integrations:TO-220"
+      (place U1 146050 -102870 front 180 (PN LM7805CT))
+    )
+    (component myLib:BARREL_JACK_FR
+      (place CON1 190500 -93980 front 180 (PN BARREL_JACK))
     )
   )
   (library
@@ -82,29 +88,6 @@
       (outline (path signal 150  -750 -1250  3250 -1250))
       (pin Rect[A]Pad_1200x1200_um 1 0 0)
       (pin Round[A]Pad_1200_um 2 2500 0)
-    )
-    (image Capacitors_Elko_ThroughHole:Elko_vert_20x10mm_RM2.5
-      (outline (path signal 150  -381 2159  -381 1143))
-      (outline (path signal 150  -889 1651  127 1651))
-      (outline (path signal 150  -381 2159  -381 1143))
-      (outline (path signal 150  -889 1651  127 1651))
-      (outline (path signal 150  6350 0  6101.37 -1569.81  5379.81 -2985.95  4255.95 -4109.81
-            2839.81 -4831.37  1270 -5080  -299.806 -4831.37  -1715.95 -4109.81
-            -2839.81 -2985.95  -3561.37 -1569.81  -3810 0  -3561.37 1569.81
-            -2839.81 2985.95  -1715.95 4109.81  -299.806 4831.37  1270 5080
-            2839.81 4831.37  4255.95 4109.81  5379.81 2985.95  6101.37 1569.81))
-      (pin Round[A]Pad_1501.14_um 2 2540 0)
-      (pin Round[A]Pad_1501.14_um 1 0 0)
-    )
-    (image Connect:BARREL_JACK
-      (outline (path signal 150  -4000.5 4500.88  -4000.5 -4500.88))
-      (outline (path signal 150  -7500.62 4500.88  -7500.62 -4500.88))
-      (outline (path signal 150  -7500.62 -4500.88  7000.24 -4500.88))
-      (outline (path signal 150  7000.24 -4500.88  7000.24 4500.88))
-      (outline (path signal 150  7000.24 4500.88  -7500.62 4500.88))
-      (pin Rect[A]Pad_3500.12x3500.12_um 1 6200.14 0)
-      (pin Rect[A]Pad_3500.12x3500.12_um 2 200.66 0)
-      (pin Rect[A]Pad_3500.12x3500.12_um 3 3200.4 -4699)
     )
     (image "LEDs:LED-5MM"
       (outline (path signal 50  4400 3150  4400 -3150))
@@ -287,6 +270,46 @@
       (pin Oval[A]Pad_1727.2x1727.2_um 5 0 -5080)
       (pin Oval[A]Pad_1727.2x1727.2_um 6 2540 -5080)
     )
+    (image Capacitors_Elko_ThroughHole:Elko_vert_20x10mm_RM2.5
+      (outline (path signal 150  -381 2159  -381 1143))
+      (outline (path signal 150  -889 1651  127 1651))
+      (outline (path signal 150  -381 2159  -381 1143))
+      (outline (path signal 150  -889 1651  127 1651))
+      (outline (path signal 150  6350 0  6101.37 -1569.81  5379.81 -2985.95  4255.95 -4109.81
+            2839.81 -4831.37  1270 -5080  -299.806 -4831.37  -1715.95 -4109.81
+            -2839.81 -2985.95  -3561.37 -1569.81  -3810 0  -3561.37 1569.81
+            -2839.81 2985.95  -1715.95 4109.81  -299.806 4831.37  1270 5080
+            2839.81 4831.37  4255.95 4109.81  5379.81 2985.95  6101.37 1569.81))
+      (pin Round[A]Pad_1501.14_um 2 2540 0)
+      (pin Round[A]Pad_1501.14_um 1 0 0)
+    )
+    (image "Power_Integrations:TO-220"
+      (outline (path signal 150  4826 1651  4826 -1778))
+      (outline (path signal 150  -4826 1651  -4826 -1778))
+      (outline (path signal 150  5334 2794  -5334 2794))
+      (outline (path signal 150  1778 1778  1778 3048))
+      (outline (path signal 150  -1778 1778  -1778 3048))
+      (outline (path signal 150  -5334 1651  5334 1651))
+      (outline (path signal 150  5334 -1778  -5334 -1778))
+      (outline (path signal 150  -5334 3048  -5334 -1778))
+      (outline (path signal 150  5334 3048  5334 -1778))
+      (outline (path signal 150  5334 3048  -5334 3048))
+      (pin Oval[A]Pad_2032x2540_um 2 0 0)
+      (pin Oval[A]Pad_2032x2540_um 3 2540 0)
+      (pin Oval[A]Pad_2032x2540_um 1 -2540 0)
+    )
+    (image myLib:BARREL_JACK_FR
+      (outline (path signal 150  -4000.5 4500.88  -4000.5 -4500.88))
+      (outline (path signal 150  -7500.62 4500.88  -7500.62 -4500.88))
+      (outline (path signal 150  -7500.62 -4500.88  7000.24 -4500.88))
+      (outline (path signal 150  7000.24 -4500.88  7000.24 4500.88))
+      (outline (path signal 150  7000.24 4500.88  -7500.62 4500.88))
+      (pin Rect[A]Pad_3500.12x3500.12_um 2 660.4 3556)
+      (pin Rect[A]Pad_3500.12x3500.12_um 3 660.4 3556)
+      (pin Rect[A]Pad_3500.12x3500.12_um 3@1 660.4 -3429)
+      (pin Rect[A]Pad_3500.12x3500.12_um 1 6200.14 0)
+      (pin Rect[A]Pad_3500.12x3500.12_um 3@2 660.4 -3429)
+    )
     (padstack Round[A]Pad_1200_um
       (shape (circle F.Cu 1200))
       (shape (circle In1.Cu 1200))
@@ -315,6 +338,11 @@
     (padstack Oval[A]Pad_1727.2x1727.2_um
       (shape (path F.Cu 1727.2  0 0  0 0))
       (shape (path In1.Cu 1727.2  0 0  0 0))
+      (attach off)
+    )
+    (padstack Oval[A]Pad_2032x2540_um
+      (shape (path F.Cu 2032  0 -254  0 254))
+      (shape (path In1.Cu 2032  0 -254  0 254))
       (attach off)
     )
     (padstack Oval[A]Pad_2032x2032_um
@@ -357,25 +385,22 @@
       (shape (rect In1.Cu -863.6 -863.6 863.6 863.6))
       (attach off)
     )
-    (padstack "Via[0-1]_600:400_um"
-      (shape (circle F.Cu 600))
-      (shape (circle In1.Cu 600))
+    (padstack "Via[0-1]_500:300_um"
+      (shape (circle F.Cu 500))
+      (shape (circle In1.Cu 500))
       (attach off)
     )
   )
   (network
     (net "Net-(C1-Pad1)"
-      (pins C1-1 C2-1 C3-1 IC1-7 IC2-1 IC2-8 IC2-16 P1-2 P2-2 R1-1 SW1-1)
+      (pins C1-1 C3-1 IC1-7 IC2-1 IC2-16 P1-2 P2-2 R1-1 U1-3 C2-1)
     )
     (net GNDA
-      (pins C1-2 C2-2 C3-2 CON1-2 D1-2 IC1-8 IC1-22 IC2-4 IC2-5 IC2-9 IC2-12 IC2-13
-        P1-4 P1-6 P1-8 P1-10 P2-1 SW2-2)
+      (pins C1-2 C3-2 D1-2 IC1-8 IC1-22 IC2-4 IC2-5 IC2-9 IC2-12 IC2-13 P1-4 P1-6
+        P1-8 P1-10 P2-1 SW2-2 C4-2 C5-2 U1-2 C2-2 CON1-3 CON1-3@1 CON1-3@2)
     )
     (net "Net-(CON1-Pad1)"
-      (pins CON1-1 SW1-2)
-    )
-    (net "Net-(CON1-Pad3)"
-      (pins CON1-3)
+      (pins SW1-2 CON1-1)
     )
     (net "Net-(D1-Pad1)"
       (pins D1-1 R3-1)
@@ -390,10 +415,10 @@
       (pins IC1-4 P2-5)
     )
     (net "Net-(IC1-Pad5)"
-      (pins IC1-5 SW2-1)
+      (pins IC1-5)
     )
     (net "Net-(IC1-Pad6)"
-      (pins IC1-6)
+      (pins IC1-6 SW2-1)
     )
     (net "Net-(IC1-Pad9)"
       (pins IC1-9)
@@ -482,25 +507,31 @@
     (net "Net-(R3-Pad2)"
       (pins R3-2 SW2-4)
     )
-    (net "Net-(SW1-Pad3)"
-      (pins SW1-3)
+    (net "Net-(C4-Pad1)"
+      (pins IC2-8 SW1-3 C4-1 C5-1 U1-1)
     )
-    (class kicad_default "" GNDA "Net-(C1-Pad1)" "Net-(CON1-Pad1)" "Net-(CON1-Pad3)"
-      "Net-(D1-Pad1)" "Net-(IC1-Pad1)" "Net-(IC1-Pad10)" "Net-(IC1-Pad11)"
-      "Net-(IC1-Pad12)" "Net-(IC1-Pad13)" "Net-(IC1-Pad14)" "Net-(IC1-Pad15)"
-      "Net-(IC1-Pad16)" "Net-(IC1-Pad17)" "Net-(IC1-Pad18)" "Net-(IC1-Pad19)"
-      "Net-(IC1-Pad2)" "Net-(IC1-Pad20)" "Net-(IC1-Pad21)" "Net-(IC1-Pad23)"
-      "Net-(IC1-Pad24)" "Net-(IC1-Pad25)" "Net-(IC1-Pad26)" "Net-(IC1-Pad27)"
-      "Net-(IC1-Pad28)" "Net-(IC1-Pad3)" "Net-(IC1-Pad4)" "Net-(IC1-Pad5)"
-      "Net-(IC1-Pad6)" "Net-(IC1-Pad9)" "Net-(IC2-Pad10)" "Net-(IC2-Pad11)"
-      "Net-(IC2-Pad14)" "Net-(IC2-Pad15)" "Net-(IC2-Pad3)" "Net-(IC2-Pad6)"
-      "Net-(P1-Pad3)" "Net-(P3-Pad1)" "Net-(R3-Pad2)" "Net-(SW1-Pad3)"
+    (net "Net-(CON1-Pad2)"
+      (pins CON1-2)
+    )
+    (net "Net-(SW1-Pad1)"
+      (pins SW1-1)
+    )
+    (class kicad_default "" GNDA "Net-(C1-Pad1)" "Net-(C4-Pad1)" "Net-(CON1-Pad1)"
+      "Net-(CON1-Pad2)" "Net-(D1-Pad1)" "Net-(IC1-Pad1)" "Net-(IC1-Pad10)"
+      "Net-(IC1-Pad11)" "Net-(IC1-Pad12)" "Net-(IC1-Pad13)" "Net-(IC1-Pad14)"
+      "Net-(IC1-Pad15)" "Net-(IC1-Pad16)" "Net-(IC1-Pad17)" "Net-(IC1-Pad18)"
+      "Net-(IC1-Pad19)" "Net-(IC1-Pad2)" "Net-(IC1-Pad20)" "Net-(IC1-Pad21)"
+      "Net-(IC1-Pad23)" "Net-(IC1-Pad24)" "Net-(IC1-Pad25)" "Net-(IC1-Pad26)"
+      "Net-(IC1-Pad27)" "Net-(IC1-Pad28)" "Net-(IC1-Pad3)" "Net-(IC1-Pad4)"
+      "Net-(IC1-Pad5)" "Net-(IC1-Pad6)" "Net-(IC1-Pad9)" "Net-(IC2-Pad10)"
+      "Net-(IC2-Pad11)" "Net-(IC2-Pad14)" "Net-(IC2-Pad15)" "Net-(IC2-Pad3)"
+      "Net-(IC2-Pad6)" "Net-(P1-Pad3)" "Net-(P3-Pad1)" "Net-(R3-Pad2)" "Net-(SW1-Pad1)"
       (circuit
-        (use_via Via[0-1]_600:400_um)
+        (use_via Via[0-1]_500:300_um)
       )
       (rule
-        (width 250)
-        (clearance 200.1)
+        (width 300)
+        (clearance 300.1)
       )
     )
   )

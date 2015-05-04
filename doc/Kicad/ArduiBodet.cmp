@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 30/04/2015 13:00:53
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 04/05/2015 13:01:56
 
 BeginCmp
 TimeStamp = /553F277F;
@@ -10,8 +10,8 @@ EndCmp
 BeginCmp
 TimeStamp = /553F29DF;
 Reference = C2;
-ValeurCmp = CP;
-IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_20x10mm_RM2.5;
+ValeurCmp = 100 nF;
+IdModule  = Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5;
 EndCmp
 
 BeginCmp
@@ -22,10 +22,24 @@ IdModule  = Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5;
 EndCmp
 
 BeginCmp
+TimeStamp = /55460F8C;
+Reference = C4;
+ValeurCmp = 1000 uF;
+IdModule  = Capacitors_Elko_ThroughHole:Elko_vert_20x10mm_RM2.5;
+EndCmp
+
+BeginCmp
+TimeStamp = /55460D40;
+Reference = C5;
+ValeurCmp = 330nF;
+IdModule  = Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5;
+EndCmp
+
+BeginCmp
 TimeStamp = /553F4D1D;
 Reference = CON1;
 ValeurCmp = BARREL_JACK;
-IdModule  = Connect:BARREL_JACK;
+IdModule  = myLib:BARREL_JACK_FR;
 EndCmp
 
 BeginCmp
@@ -60,7 +74,7 @@ BeginCmp
 TimeStamp = /553F85BE;
 Reference = P2;
 ValeurCmp = DS3231_Breakout_Connector;
-IdModule  = Pin_Headers:Pin_Header_Straight_1x05;
+IdModule  = Socket_Strips:Socket_Strip_Straight_1x05;
 EndCmp
 
 BeginCmp
@@ -103,6 +117,13 @@ TimeStamp = /553F233A;
 Reference = SW2;
 ValeurCmp = Switch_DPST;
 IdModule  = Pin_Headers:Pin_Header_Straight_2x03;
+EndCmp
+
+BeginCmp
+TimeStamp = /5545FF74;
+Reference = U1;
+ValeurCmp = LM7805CT;
+IdModule  = Power_Integrations:TO-220;
 EndCmp
 
 EndListe
