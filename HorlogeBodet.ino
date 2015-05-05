@@ -91,9 +91,10 @@ void setup() {
 	 DateTime now = RTC.now();
         //TODO: remove true after tests
 	 if(true || now.year() == 2000){
-			//first run or dead battery, reinit to compile time & date
+			//first run or dead battery, reinit to compile time & date (time must be UTC!)
 			//DateTime newDT = DateTime(__DATE__, __TIME__);
-			DateTime newDT = DateTime(2015,5,1,15,20);
+			//DateTime newDT = DateTime(2015,10,31,2,55);
+			DateTime newDT = DateTime(2015,10,25,0,55);
 			clock.setClockMode(false);	// set to 24h
 		 	clock.setYear(newDT.year()-2000);
 			clock.setMonth(newDT.month());
