@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 07/05/2015 19:59:21
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 08/05/2015 06:48:30
 
 BeginCmp
 TimeStamp = /553F277F;
@@ -116,7 +116,7 @@ BeginCmp
 TimeStamp = /553F233A;
 Reference = SW2;
 ValeurCmp = Switch_DPST;
-IdModule  = Pin_Headers:Pin_Header_Straight_2x03;
+IdModule  = myLib:Pin_Header_Straight_2x03_for_SPDT_switch;
 EndCmp
 
 BeginCmp
