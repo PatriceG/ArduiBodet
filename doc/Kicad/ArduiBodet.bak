@@ -62,7 +62,7 @@ U 1 1 553F233A
 P 7500 5300
 F 0 "SW2" H 7800 5350 50  0000 C CNN
 F 1 "Switch_DPST" H 7800 5250 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x03" H 7500 5300 60  0001 C CNN
+F 2 "myLib:Pin_Header_Straight_2x03_for_SPDT_switch" H 7500 5300 60  0001 C CNN
 F 3 "" H 7500 5300 60  0000 C CNN
 	1    7500 5300
 	1    0    0    -1  
@@ -139,7 +139,7 @@ U 1 1 553F2C4A
 P 8100 4550
 F 0 "R2" V 8180 4550 50  0000 C CNN
 F 1 "47" V 8100 4550 50  0000 C CNN
-F 2 "Resistors_ThroughHole:Resistor_Horizontal_RM10mm" V 8030 4550 30  0001 C CNN
+F 2 "Resistors_ThroughHole:Resistor_Vertical_RM5mm" V 8030 4550 30  0001 C CNN
 F 3 "" H 8100 4550 30  0000 C CNN
 	1    8100 4550
 	0    1    1    0   

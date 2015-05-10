@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 08/05/2015 06:48:30
+Cmp-Mod V01 Created by Cvpcb (after 2015-mar-04 BZR unknown)-product   date = 10/05/2015 11:29:58
 
 BeginCmp
 TimeStamp = /553F277F;
@@ -95,7 +95,7 @@ BeginCmp
 TimeStamp = /553F2C4A;
 Reference = R2;
 ValeurCmp = 47;
-IdModule  = Resistors_ThroughHole:Resistor_Horizontal_RM10mm;
+IdModule  = Resistors_ThroughHole:Resistor_Vertical_RM5mm;
 EndCmp
 
 BeginCmp
