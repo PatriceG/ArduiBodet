@@ -1,4 +1,4 @@
-update=28/04/2015 07:59:29
+update=18/05/2015 12:48:07
 version=1
 last_client=kicad
 [pcbnew]
@@ -25,9 +25,22 @@ version=1
 NetIExt=net
 [general]
 version=1
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+RptD_X=0
+RptD_Y=100
+RptLab=1
+LabSize=60
 [eeschema]
 version=1
-LibDir=
+LibDir=D:/Program Files/KiCad/share/kicad/library/VeeCad
 [eeschema/libraries]
 LibName1=power
 LibName2=device
@@ -60,3 +73,14 @@ LibName28=atmel
 LibName29=contrib
 LibName30=valves
 LibName31=D:/Program Files/KiCad/share/kicad/library/SN754410
+LibName32=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_adc_dac
+LibName33=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_Battery
+LibName34=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_Connector
+LibName35=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_Diode
+LibName36=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_Linear
+LibName37=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_Logic
+LibName38=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_Microcontroller
+LibName39=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_Passive
+LibName40=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_Regulator
+LibName41=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_Relay
+LibName42=D:/Program Files/KiCad/share/kicad/library/VeeCad/V_Transistor
