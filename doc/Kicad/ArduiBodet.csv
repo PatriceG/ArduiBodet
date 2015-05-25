@@ -1,4 +1,4 @@
-Reference; Value; Footprint; Datasheet
+Reference; Value; Footprint; Cost
 IC1;ATMEGA328-P;Housings_DIP:DIP-28__300;
 SW2;Switch_DPST;myLib:Pin_Header_Straight_2x03_for_SPDT_switch;
 SW1;SWITCH_INV;Pin_Headers:Pin_Header_Straight_1x03;
@@ -17,3 +17,8 @@ IC2;SN754410;Housings_DIP:DIP-16__300;
 U1;LM7805CT;Power_Integrations:TO-220;
 C5;330nF;Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5;
 C4;1000 uF;Capacitors_Elko_ThroughHole:Elko_vert_20x10mm_RM2.5;
+;;;
+;Copper plate;;
+;Oxygen Peroxyde;;
+;Box;;
+;;;0

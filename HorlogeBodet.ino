@@ -9,7 +9,7 @@
 #include <avr/sleep.h>
 #include <avr/wdt.h>
 
-#define DEBUG_SERIAL 1
+//#define DEBUG_SERIAL 1
 
 #if defined(__AVR_ATmega32U4__)
 #define PIN_INTERRUPT 0
@@ -25,7 +25,6 @@
 
 #define PULSE_WIDTH 400
 #define PERIOD 1000
-//#define PERIOD 30000
 #define OFFSET_WINTER 3600
 #define OFFSET_SUMMER 7200
 #define OFFSET_ADDRESS 0
@@ -89,12 +88,12 @@ void setup() {
 	 clock.enableOscillator(true,false,0); //enable 1Hz on SQW output
 	 
 	 DateTime now = RTC.now();
-        //TODO: remove true after tests
-	 if(true || now.year() == 2000){
+         if(now.year() == 2000){
 			//first run or dead battery, reinit to compile time & date (time must be UTC!)
 			//DateTime newDT = DateTime(__DATE__, __TIME__);
 			//DateTime newDT = DateTime(2015,10,31,2,55);
-			DateTime newDT = DateTime(2015,10,25,0,55);
+			//DateTime newDT = DateTime(2015,10,25,0,55);
+                        DateTime newDT = DateTime(2015,05,21,12,48);
 			clock.setClockMode(false);	// set to 24h
 		 	clock.setYear(newDT.year()-2000);
 			clock.setMonth(newDT.month());
@@ -295,7 +294,7 @@ void loop() {
 	
 	//LowPower.powerSave(SLEEP_FOREVER, ADC_OFF, BOD_ON,TIMER2_ON);  
 	//LowPower.idle(SLEEP_FOREVER, ADC_OFF,TIMER4_ON,TIMER3_ON,	TIMER1_ON, TIMER0_ON,SPI_ON,USART1_ON,TWI_ON,USB_ON);  
-	//TODO supprimer après tests
+	//TODO supprimer aprï¿½s tests
 	pinMode(13,OUTPUT);
 	digitalWrite(13,HIGH);
 	delay(25);
