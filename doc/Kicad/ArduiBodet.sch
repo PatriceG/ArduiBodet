@@ -10,7 +10,6 @@ LIBS:cmos4000
 LIBS:adc-dac
 LIBS:memory
 LIBS:xilinx
-LIBS:special
 LIBS:microcontrollers
 LIBS:dsp
 LIBS:microchip
@@ -29,7 +28,8 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:SN754410
+LIBS:HBridge
+LIBS:arduibodet
 LIBS:ArduiBodet-cache
 EELAYER 25 0
 EELAYER END
@@ -37,8 +37,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "ArduiBodet - Horloge mère pour horloge Bodet 1/2 MIN"
-Date "mercredi 29 avril 2015"
-Rev "1"
+Date "2015-11-02"
+Rev "1.1"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -95,7 +95,7 @@ U 1 1 553F277F
 P 2850 4100
 F 0 "C1" H 2875 4200 50  0000 L CNN
 F 1 "100nF" H 2875 4000 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5" H 2888 3950 30  0001 C CNN
+F 2 "MyLib:C_Rect_L7_W2.5_P2.5" H 2888 3950 30  0001 C CNN
 F 3 "" H 2850 4100 60  0000 C CNN
 	1    2850 4100
 	1    0    0    -1  
@@ -106,7 +106,7 @@ U 1 1 553F289E
 P 9150 3200
 F 0 "C3" H 9175 3300 50  0000 L CNN
 F 1 "100nF" H 9175 3100 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5" H 9188 3050 30  0001 C CNN
+F 2 "MyLib:C_Rect_L7_W2.5_P2.5" H 9188 3050 30  0001 C CNN
 F 3 "" H 9150 3200 60  0000 C CNN
 	1    9150 3200
 	1    0    0    -1  
@@ -117,7 +117,7 @@ U 1 1 553F29DF
 P 6950 1850
 F 0 "C2" H 6975 1950 50  0000 L CNN
 F 1 "100 nF" H 6975 1750 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5" H 6988 1700 30  0001 C CNN
+F 2 "MyLib:C_Rect_L7_W2.5_P2.5" H 6988 1700 30  0001 C CNN
 F 3 "" H 6950 1850 60  0000 C CNN
 	1    6950 1850
 	1    0    0    -1  
@@ -197,28 +197,6 @@ F 1 "PWR_FLAG" H 5550 1880 50  0000 C CNN
 F 2 "" H 5550 1700 60  0000 C CNN
 F 3 "" H 5550 1700 60  0000 C CNN
 	1    5550 1700
-	1    0    0    -1  
-$EndComp
-$Comp
-L DS3231_Breakout_Connector P2
-U 1 1 553F85BE
-P 6050 5050
-F 0 "P2" H 6050 5350 50  0000 C CNN
-F 1 "DS3231_Breakout_Connector" H 6247 4735 50  0000 C CNN
-F 2 "Socket_Strips:Socket_Strip_Straight_1x05" H 6050 5050 60  0001 C CNN
-F 3 "" H 6050 5050 60  0000 C CNN
-	1    6050 5050
-	1    0    0    -1  
-$EndComp
-$Comp
-L ISP10PIN P1
-U 1 1 553F76C9
-P 6000 3350
-F 0 "P1" H 6550 3400 50  0000 C CNN
-F 1 "ISP10PIN" H 6400 2800 50  0000 C CNN
-F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 6000 2150 60  0001 C CNN
-F 3 "" H 6000 2150 60  0000 C CNN
-	1    6000 3350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -352,7 +330,7 @@ U 1 1 55460D40
 P 5800 1850
 F 0 "C5" H 5825 1950 50  0000 L CNN
 F 1 "330nF" H 5825 1750 50  0000 L CNN
-F 2 "Capacitors_ThroughHole:C_Rect_L4_W2.5_P2.5" H 5838 1700 30  0001 C CNN
+F 2 "MyLib:C_Rect_L7_W2.5_P2.5" H 5838 1700 30  0001 C CNN
 F 3 "" H 5800 1850 60  0000 C CNN
 	1    5800 1850
 	1    0    0    -1  
@@ -563,4 +541,27 @@ Wire Wire Line
 Connection ~ 6950 1700
 Wire Wire Line
 	7850 1700 7850 2500
+$Comp
+L DS3231_Breakout_Connector P2
+U 1 1 562E1AFB
+P 6050 5100
+F 0 "P2" H 6050 5450 50  0000 C CNN
+F 1 "DS3231_Breakout_Connector" V 6150 5100 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x06" H 6050 5100 60  0001 C CNN
+F 3 "" H 6050 5100 60  0000 C CNN
+	1    6050 5100
+	1    0    0    -1  
+$EndComp
+NoConn ~ 5850 5350
+$Comp
+L ICSP_10_PIN P1
+U 1 1 562E2283
+P 6300 3600
+F 0 "P1" H 6300 3900 50  0000 C CNN
+F 1 "ICSP_10_PIN" H 6300 3300 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_2x05" H 6300 2400 60  0001 C CNN
+F 3 "" H 6300 2400 60  0000 C CNN
+	1    6300 3600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
