@@ -25,7 +25,7 @@ La plupart des ATMega328 sont livrés configurés pour fonctionner avec un quart
 
 Avant de pouvoir flasher le firmware il faut donc installer l'ATMega sur une Breadboard en y câblant un quartz 16MHz et ses condensateurs associés, et y brancher le programmateur (j'utilise un USBAsp).
 
-J'ai ensuite suivi [cette doc](https://www.electrosoftcloud.com/en/changing-the-arduino-clock-speed/) avec un IDE Arduino 1.8.18, pour configurer l'Arduino en mode horloge interne 1MHz (ou 8MHz, ça fonctionne aussi).
+J'ai ensuite suivi [cette doc](https://www.electrosoftcloud.com/en/changing-the-arduino-clock-speed/) avec un IDE Arduino 1.8.18, mais cela fonctionne aussi avec l'IDE Arduino 2.x, pour configurer l'Arduino en mode horloge interne 1MHz (ou 8MHz, ça fonctionne aussi).
 
 Une fois les définitions de Board MiniCore installées et choisi ATMega328 on a accès à tout un tas de settings, dont le mode de fonctionnement de l'horloge. 
 Il reste ensuite à cliquer sur "Graver la séquence d'initialisation" pour flasher cette config de fuses (avec le programmateur choisi. J'utilise un USBAsp).
